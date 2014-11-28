@@ -21,6 +21,7 @@ class SalonsController extends AppController {
 	}
 	public function rejoindre(){
 		$this->set ( 'id_salon', $this->params['pass'][0]);		
+		$this->set ( 'salon', $this->Salon->find ( 'all' ) );
 	}
 }
 ?>

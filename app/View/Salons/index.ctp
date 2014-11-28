@@ -10,7 +10,7 @@
 			<td><?php echo $salon['Salon']['id_salon']; ?></td>
 			<td><?php echo $salon['Salon']['nom_salon']; ?></td>
 			<td><?php echo $salon['Salon']['nb_users'].'/'.$salon['Salon']['nb_users_max']; ?></td>
-			<td><?php echo $this->Html->link ( 'Rejoindre', array ('action' => 'edit',$salon ['Salon'] ['id_salon'] ) );?></td>
+			<td><?php echo $this->Html->link ( 'Rejoindre', array ('action' => 'rejoindre',$salon ['Salon'] ['id_salon'] ) );?></td>
 		</tr>
     <?php endforeach; ?>
 </table>

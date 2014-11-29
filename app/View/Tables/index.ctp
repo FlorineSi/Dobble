@@ -1,8 +1,8 @@
+<?php echo $this->Html->css('forms');?>
 <h1>Liste des Cartes</h1>
 <?php
 $nb_fichier = 1;
 $tab_images = array();
-echo '<ul>';
 if ($dossier = opendir ( './img/img' )) {
 	while ( false !== ($fichier = readdir ( $dossier )) )
 		if ($fichier != '.' && $fichier != '..' && $fichier != 'index.php') {
@@ -38,22 +38,29 @@ function cards() {
 	shuffle($A);
 	shuffle($B);
 	shuffle($C);
-	return array_merge($A, $B, $C);
+	$tab = array_merge($A, $B, $C);
+	shuffle($tab);
+	return $tab	;
 }
 
 $a = cards();
-echo "<table>";
-foreach($a as $carte){
-	echo "<tr>";
+
+foreach($a as $carte){?>
+	<div class = "carte" style = "border: solid blue;
+border-radius: 50%;
+height: 350px;
+width: 350px;">
+	<?php 
+	$nb=0;
 	foreach($carte as $symbole){
 		// symbole : id de l'image
-		echo "<td>";
+		echo "<div class = symb".$nb." id =".$symbole.">";
 		echo $this->Html->image ( "img/".$tab_images[$symbole], array ('fullBase' => true ) );
-		
-		echo "</td>";
+		echo "</div>";
+		$nb++;
 	}
-	echo "</tr>";
-	
+	echo "</div>";
+
 }
-echo "</table>";
+
 ?>

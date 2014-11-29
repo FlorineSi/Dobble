@@ -19,9 +19,12 @@ class SalonsController extends AppController {
 			$this->Session->setFlash ( __ ( 'Impossible de creer votre salon' ) );
 		}
 	}
-	public function rejoindre(){
-		$this->set ( 'id_salon', $this->params['pass'][0]);		
-		$this->set ( 'salon', $this->Salon->find ( 'all' ) );
+	public function rejoindre() {
+		$this->set ( 'salon', $this->Salon->find ( 'all', array (
+				'conditions' => array (
+						'id_salon' => $this->params ['pass'] [0] 
+				) 
+		) ) );
 	}
 }
 ?>

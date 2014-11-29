@@ -1,0 +1,55 @@
+
+.carte{
+	border: solid blue;
+	border-radius: 50%;
+	height: 350px;
+	width: 350px;
+}
+
+.symb0{
+	position:absolute;
+	padding-left: 150px;
+	padding-top: 10px;
+}
+
+.symb1{
+	position:absolute;
+	padding-left: 50px;
+	margin-top:60px;
+}
+
+.symb2{
+	position:absolute;
+	padding-left: 20px;
+	padding-top: 150px;
+}
+
+.symb3{
+	position:absolute;
+	padding-left: 170px;
+	padding-top: 270px;
+}
+
+.symb4{
+	position:absolute;
+	padding-left: 250px;
+	margin-top: 180px;
+}
+
+.symb5{
+	position:absolute;
+	padding-left: 80px;
+	margin-top: 240px;
+}
+
+.symb6{
+	position:absolute;
+	padding-left: 250px;
+	margin-top:95px
+}
+
+.symb7{
+	position:absolute;
+	padding-left: 150px;
+	margin-top:130px;
+}
